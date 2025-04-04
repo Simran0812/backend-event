@@ -19,6 +19,13 @@ app.use(cors({
 app.use(express.json()); // ✅ Middleware for JSON requests
 app.use(express.urlencoded({ extended: true })); // ✅ Middleware for form data
 
+app.get("/",(req, res)=>{
+    res.json({
+        sucess: true,
+        message:"simran is cute",
+    });
+});
+
 // ✅ Correct router path
 app.use("/api/v1/message", messageRouter);
 
